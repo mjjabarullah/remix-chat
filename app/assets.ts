@@ -9,8 +9,8 @@ export const assetServer = createAssetServer({
     'app/*path': 'app/*path',
     'node_modules/*path': 'node_modules/*path',
   },
-  allow: ['app/assets/**', 'node_modules/**'],
-  deny: ['app/**/*.server.*'],
+  allow: ['app/**', 'node_modules/**'],
+  deny: ['app/**/*.server.*', 'app/actions/**', 'server.ts'],
   sourceMaps: process.env.NODE_ENV === 'development' ? 'external' : undefined,
   scripts: {
     define: {
